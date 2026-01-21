@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rúbrica de Evaluación - Demostración Matemática</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f766e 0%, #14532d 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #2d3748;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #0f766e;
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #0f766e 0%, #14532d 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 13px;
+            border: 1px solid #0d9488;
+        }
+        
+        td {
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        td:first-child {
+            background-color: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        tr:hover {
+            background-color: #edf2f7;
+        }
+        
+        .score-section {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .score-section h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .score-table {
+            margin-top: 15px;
+        }
+        
+        .score-table th {
+            background: #065f46;
+        }
+        
+        .observations {
+            background: #fff5f5;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #fc8181;
+        }
+        
+        .observations h2 {
+            color: #c53030;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #e2e8f0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .input-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .input-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-item label {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            th, td {
+                padding: 8px;
+                font-size: 11px;
+            }
+            
+            .input-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rúbrica de Evaluación - Demostración de Ejercicio Matemático</h1>
+        <p class="subtitle">Enfoque Cuantitativo</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Criterio</th>
+                    <th style="width: 17%;">Excelente<br>(4 puntos)</th>
+                    <th style="width: 17%;">Bueno<br>(3 puntos)</th>
+                    <th style="width: 17%;">Satisfactorio<br>(2 puntos)</th>
+                    <th style="width: 17%;">Necesita Mejorar<br>(1 punto)</th>
+                    <th style="width: 17%;">No Cumple<br>(0 puntos)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Planteamiento del Problema</td>
+                    <td>Presenta el problema de forma clara, completa y contextualizada. Identifica todos los datos relevantes.</td>
+                    <td>Presenta el problema de forma clara con los datos principales identificados.</td>
+                    <td>Presenta el problema pero falta claridad o algunos datos relevantes.</td>
+                    <td>El planteamiento es confuso o incompleto.</td>
+                    <td>No presenta el problema adecuadamente.</td>
+                </tr>
+                <tr>
+                    <td>Procedimiento y Metodología</td>
+                    <td>Demuestra dominio completo del procedimiento. Cada paso está justificado matemáticamente.</td>
+                    <td>Aplica el procedimiento correctamente con justificación en la mayoría de los pasos.</td>
+                    <td>Aplica el procedimiento con algunos errores menores o justificaciones incompletas.</td>
+                    <td>El procedimiento tiene errores significativos o carece de justificación.</td>
+                    <td>No sigue un procedimiento coherente.</td>
+                </tr>
+                <tr>
+                    <td>Uso de Notación Matemática</td>
+                    <td>Utiliza notación matemática correcta, precisa y consistente en toda la demostración.</td>
+                    <td>Utiliza notación correcta con errores mínimos que no afectan la comprensión.</td>
+                    <td>Utiliza notación con algunos errores que dificultan parcialmente la comprensión.</td>
+                    <td>La notación es incorrecta o inconsistente en varios puntos.</td>
+                    <td>No utiliza notación matemática adecuada.</td>
+                </tr>
+                <tr>
+                    <td>Desarrollo Lógico</td>
+                    <td>La secuencia de pasos es completamente lógica y coherente. Todas las transiciones están bien explicadas.</td>
+                    <td>La secuencia es lógica con transiciones claras en la mayoría de los pasos.</td>
+                    <td>La secuencia es generalmente lógica pero tiene saltos o transiciones poco claras.</td>
+                    <td>El desarrollo tiene problemas de lógica o coherencia significativos.</td>
+                    <td>No hay secuencia lógica identificable.</td>
+                </tr>
+                <tr>
+                    <td>Precisión en Cálculos</td>
+                    <td>Todos los cálculos son correctos y precisos.</td>
+                    <td>La mayoría de los cálculos son correctos (90% o más).</td>
+                    <td>Los cálculos tienen algunos errores (70-89% correctos).</td>
+                    <td>Múltiples errores en los cálculos (50-69% correctos).</td>
+                    <td>La mayoría de los cálculos son incorrectos.</td>
+                </tr>
+                <tr>
+                    <td>Solución Final</td>
+                    <td>La solución es completamente correcta, verificada y presentada de forma clara.</td>
+                    <td>La solución es correcta y está bien presentada.</td>
+                    <td>La solución tiene errores menores o la presentación no es óptima.</td>
+                    <td>La solución tiene errores significativos.</td>
+                    <td>La solución es incorrecta o no se presenta.</td>
+                </tr>
+                <tr>
+                    <td>Claridad en la Explicación</td>
+                    <td>La explicación oral/escrita es excepcionalmente clara, precisa y comprensible para la audiencia.</td>
+                    <td>La explicación es clara y comprensible.</td>
+                    <td>La explicación es comprensible pero falta claridad en algunos puntos.</td>
+                    <td>La explicación es confusa o difícil de seguir.</td>
+                    <td>No hay explicación o es incomprensible.</td>
+                </tr>
+                <tr>
+                    <td>Dominio del Tema</td>
+                    <td>Demuestra dominio excepcional del tema, responde preguntas con confianza y profundidad.</td>
+                    <td>Demuestra buen dominio del tema y responde preguntas correctamente.</td>
+                    <td>Demuestra conocimiento básico del tema.</td>
+                    <td>Muestra conocimiento limitado o inseguridad.</td>
+                    <td>No demuestra conocimiento del tema.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="score-section">
+            <h2>Sistema de Calificación</h2>
+            <p><strong>Puntuación Total:</strong> 32 puntos</p>
+            
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>Rango de Puntos</th>
+                        <th>Calificación Numérica</th>
+                        <th>Nivel de Desempeño</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;">29-32</td>
+                        <td style="text-align: center;">9.5-10.0</td>
+                        <td style="text-align: center;">Excelente</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">25-28</td>
+                        <td style="text-align: center;">8.5-9.4</td>
+                        <td style="text-align: center;">Muy Bueno</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">21-24</td>
+                        <td style="text-align: center;">7.5-8.4</td>
+                        <td style="text-align: center;">Bueno</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">17-20</td>
+                        <td style="text-align: center;">6.5-7.4</td>
+                        <td style="text-align: center;">Satisfactorio</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">13-16</td>
+                        <td style="text-align: center;">5.0-6.4</td>
+                        <td style="text-align: center;">Suficiente</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">0-12</td>
+                        <td style="text-align: center;">0.0-4.9</td>
+                        <td style="text-align: center;">Insuficiente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+</body>
+</html>
